@@ -111,8 +111,8 @@ img {
 .header-link {
   position: relative;
   font-weight: 500;
-  font-style: 14px;
-  line-height: 1.14px;
+  font-size: 14px;
+  line-height: 1.14;
   letter-spacing: 0.02em;
   display: flex;
   justify-content: space-between;
@@ -181,7 +181,6 @@ img {
   padding-bottom: 200px;
   margin-bottom: 0;
   min-height: 600px;
-  min-width: 1600px;
   background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
     url(../img/hero-image.jpg);
   background-size: cover;
@@ -324,7 +323,7 @@ img {
   width: 100%;
   bottom: 0;
   left: 0;
-  background-color: rgba(47, 48, 58, 0.4);
+  background-color: rgba(47, 48, 58, 0.8);
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14px;
@@ -509,7 +508,7 @@ footer .social-link {
   width: 1170px;
 }
 
-.client-item:not(:last-child) {
+.clients-item:not(:last-child) {
   margin-right: 30px;
 }
 
@@ -521,29 +520,17 @@ footer .social-link {
   height: 92px;
   border: 1px solid var(--icon-color);
   border-radius: 4px;
+  color: var(--icon-color);
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
 .client-link:hover,
 .client-link:focus {
-  border-color: var(--accent-color);
-  cursor: pointer;
+  border-color: var(--additional-icon-color-hover);
+  color: var(--accent-color);
 }
-
-.client-link svg {
-  transition: var(--color4) 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    var(--color2) 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.client-link:hover svg,
-.client-link:focus svg {
-  --color4: var(--accent-color);
-  --color2: var(--accent-color);
-}
-
 .client-ikon {
-  --color2: var(--icon-color);
+  fill: currentColor;
 }
 
 /*----------------COMPONENTS----------------------- */
@@ -818,9 +805,8 @@ footer .container {
 }
 
 .filter-btn {
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.02, 1);
-  transition: color 250ms cubic-bezier(0.4, 0, 0.02, 1);
-  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.02, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.02, 1),
+    color 250ms cubic-bezier(0.4, 0, 0.02, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.02, 1);
 }
 
 .filter-btn:hover,
@@ -846,9 +832,9 @@ footer .container {
 .project-item {
   width: 370px;
   margin: 15px;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.02, 1);
-  transition: border-bottom 250ms cubic-bezier(0.4, 0, 0.02, 1);
-  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.02, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.02, 1),
+    border-bottom 250ms cubic-bezier(0.4, 0, 0.02, 1),
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.02, 1);
 }
 
 .project-name {
